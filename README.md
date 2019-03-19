@@ -33,7 +33,7 @@ cd crypto_signal
 ```
 4. Start virtualenv
 ```
-virtualenv --python=/usr/local/bin/python3 env
+virtualenv --python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3 env
 ```
 5. Run virtualenv
 ```
@@ -47,11 +47,15 @@ pip3 install -r requirements.txt
 ```
 export NOMICS_API_KEY=YOUR_API_KEY
 ```
-8. Run development server
+8. Set PYTHONHOME environment variable
 ```
-python crypto_signal/manage.py runserver
+export PYTHONHOME=$VIRTUAL_ENV
 ```
-9. Check <http://127.0.0.1:8000/> on your browser.
+9. Run development server
+```
+/usr/local/bin/python3 crypto_signal/manage.py runserver
+```
+10. Check <http://127.0.0.1:8000/> on your browser.
 
 
 ### Endpoints
